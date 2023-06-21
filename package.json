@@ -1,0 +1,31 @@
+{
+  "name": "eigen-backend-test-case",
+  "version": "1.0.0",
+  "description": "Backend Developer Test Case",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "start:dev": "NODE_ENV=development nodemon server",
+    "init:db" : "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "test": "NODE_ENV=test jest"
+  },
+  "author": "Abby Darda Damarullah",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dayjs": "^1.11.8",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mysql2": "^3.4.0",
+    "sequelize": "^6.32.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.1",
+    "supertest": "^6.3.3"
+  }
+}
